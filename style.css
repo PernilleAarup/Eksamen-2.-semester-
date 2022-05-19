@@ -1,0 +1,286 @@
+/* Basic reset */
+:after
+:before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Main */
+body{
+    background: white;
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+}
+
+
+/* Styling af menubar & logo */
+/* Menu til mobilen */
+.navigation_container {
+    background: #ffff;
+    color: black;
+    position: sticky;
+    top:0;
+  }
+  
+.mobileiconlabel {
+    display: inline-block;
+    color: #63A0E8;
+    background: white;
+    font-style: normal;
+    font-size: 40px;
+    padding: 16px;
+  }
+.menuitem {
+    display: block;
+    width: 100%;
+    padding: 23px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+/* Funktionen der gemmer menuen, indtil der klikkes */
+.menuitems_container, 
+.mobileicon {
+    display: none;
+}
+  
+/* Funktionen der viser menuikoner når mobilikonet er klikket på */
+.navigation_container input:checked ~ .menuitems_container {
+    display: block;
+}
+  
+/* Viser logo i højre side */
+.companylogo {
+    position: absolute;
+    top: 0px;
+    right:10px;
+    width: 80px;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+
+/* Responsive layout - Fra mobil til desktop - menuen */
+@media screen and (min-width: 900px) {
+    
+/* Menubar */
+.mobileiconlabel, 
+.mobileicon {
+    display: none;
+}
+.menuitems_container {
+    display: flex;
+    justify-content: flex-end;
+}
+.menuitem {
+    width: 130px;
+}
+.menuitem:hover {
+    background: #63A0E8;
+    color: white;
+}
+.companylogo {
+      left: 30px;
+    }
+}
+    
+
+/* Styling af forsidevideo */
+.forside-video{ 
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+/* Styling af forsideindhold */
+
+/* Styling af øverste del af forsiden */
+.forside_top{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.vogn-image{
+    display: inline-block;
+    width: 600px;
+    padding: 50px;  
+}
+.forside-overskrift{
+    font-size: 26px;
+    text-align: center;
+}
+.forside-vogn-info{
+    font-size: 16px;
+    text-align: left;
+    line-height: 30px;
+}
+.knap-vogn{
+    display: grid;
+    margin: auto;
+    width: 150px;
+    background-color: #F3CD7B;
+    color: white;
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Styling af midterste del af forsiden */
+.forside_midt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #6396E1;
+    padding: 80px 80px;
+}
+.burger{
+    width: 290px;
+    height: 280px;
+}
+.burger-navn{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+div.item {
+    /* To horizontally center images and caption */
+    text-align: center;
+}
+.caption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+    color: white;
+}
+.forside-overskrift-burger{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background: #63A0E8;
+    margin-bottom: -80px;
+    text-decoration: none;
+}
+
+/* Styling af nederste del af forsiden */
+
+.forside_bund{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.tm-image{
+    display: block;
+    float: right;
+    margin-left: 20px;
+    width: 600px;
+    padding: 50px;
+}
+.knap-tm{
+    display: grid;
+    margin: auto;
+    width: 270px;
+    background-color: #F3CD7B;
+    color: white;
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* Styling af footer */
+/* Footer */
+footer{
+    position: relative;
+    width: 97.2%;
+}
+
+.flex-container{
+    background-color: #6396E1;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer_overskrift{
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+.flex-item-left{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5px;
+    color: white;
+    padding-top: 10px;
+}
+
+.flex-item-middle{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5px;
+    color: white;
+    padding-top: 10px;
+}
+.flex-item-right{
+    flex-direction: row;
+}
+
+input{
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-left: -3px;
+    font-family: Quicksand;
+}
+input[type=submit]{
+    background-color: white;
+    color: black;
+    border: none;
+    padding-right: 10px;
+}
+
+.followus{
+    color:  rgb(185, 185, 33);
+    font-size: 18px;
+    font-family: Helvetica;
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 200px;
+}
+
+#followus{
+    padding-left: 250px;
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+}
+
+.form-control{
+    border-radius: 15px;
+    padding-right: 60px;
+}
+
+.sociale{
+    width: 40px;
+    height: 40px;
+}
+
